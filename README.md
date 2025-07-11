@@ -52,7 +52,7 @@ npm install
 ## Run the development server
 
 ```bash
-nom run start
+npm run start
 ```
 Server will start at: http://localhost:3000
 
@@ -61,6 +61,32 @@ Server will start at: http://localhost:3000
 ```bash
 npm test
 ```
+
+### Test Result
+```bash
+$ npm test
+
+> resilient-email-service@1.0.0 test
+> jest
+
+  console.log
+    Provider A sent email successfully.
+
+      at MockProviderA.<anonymous> (src/providers/ProviderA.ts:6:15)
+
+ PASS  src/tests/EmailService.test.ts
+  EmailService
+    √ should send email successfully (22 ms)
+    √ should return duplicate on same email ID (1 ms)
+    √ should track status
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.823 s, estimated 2 s
+Ran all test suites.
+```
+
 ## Mock Email Providers
 
 ### MockProviderA
