@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "71b62396-f18e-4878-9a21-9bcea42528e3",
+		"name": "Resilient Email Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46630283"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"xyz\",\r\n  \"to\": \"test@example.com\",\r\n  \"subject\": \"Hello\",\r\n  \"body\": \"Test message\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"send"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/send",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"abc\",\r\n  \"to\": \"demoemail@gmail.com\",\r\n  \"subject\": \"Hello\",\r\n  \"body\": \"Test mail\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"send"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11-1loNTpuzT2wYmrsaDlzAHMcffB8\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Jul 2025 21:17:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"Sent\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/status/123",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/status/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status",
+						"123"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/status/123",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/status/xyz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"status",
+								"xyz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"40-vHYcoKNU8AtcitS9wdyyXiR3sOg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Jul 2025 21:17:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": [\n        \"2025-07-10T21:12:25.501Z - Success via Provider 1\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}
